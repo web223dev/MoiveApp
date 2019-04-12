@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from '@reach/router';
+import AppWrapper from './AppWrapper';
 
 class NewMovie extends Component {
   constructor(props) {
@@ -17,21 +19,28 @@ class NewMovie extends Component {
           return;
         }
         const movies = response.data.results;
-        this.setState({ movies })
+        this.setState({ movies });
       })
       .catch(error => {
-        console.log('Fetch error :(', error)
+        console.log('Fetch error :(', error);
       })
   }
 
   render() {
-    console.log(this.state.movies);
+    const { movies } = this.state;
     return (
       <section>
-        <h2>New Movies</h2>
-        <div className="newMovie">
-
-        </div>
+        <AppWrapper>
+          <h2>New Movies</h2>
+          <div className="newMovie">
+            {
+              movies.map((movie, index) => 
+                // <img className="imgResponsive" src={movie.poster_path ===null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={`${movies.title} poster`} key={movie.id} />
+                <img className="imgResponsive" src='http://via.placeholder.com/300x450' alt={`${movies.title} poster`} key={movie.id} />
+              )
+            }
+          </div>
+        </AppWrapper>
       </section>
     );
   }

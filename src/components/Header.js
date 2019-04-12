@@ -7,10 +7,10 @@ class Header extends Component {
   render() {
     return (
       <header className="header">
-        <AppWrapper className="container main-menu">
+        <AppWrapper className="main-menu">
           <div className="row">
             <div id="logo">
-              <Link to="/"><img src={Logo} alt="logo" />WMovies</Link>
+              <Link to="/"><img src={Logo} alt="logo" />Movies</Link>
             </div>
           </div>
         </AppWrapper>
