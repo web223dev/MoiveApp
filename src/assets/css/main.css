@@ -29,3 +29,46 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.module{
+  padding: 80px 0 100px;
+}
+#searchInput{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #a8a8a8;
+  border-radius: 5px;
+}
+.formResults{
+  background: #57a99a;
+}
+.formResults li{
+  cursor: pointer;
+  padding: 10px;
+}
+.formResults li a{
+  color: #ecf4f3;
+}
+.formResults li:hover{
+  background: #76dbd1;
+}
+.formResults img{
+  width: 60px;
+}
+.formResults .movieDetail{
+  display: inline-block;
+  vertical-align: bottom;
+  padding-left: 20px;
+}
+.newMovie img{
+  width: 100%;
+  padding: 10px;
+}
+.newMovie .movieInfo{
+  /* position: absolute;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  top: 25%; */
+  padding: 10px;
+}

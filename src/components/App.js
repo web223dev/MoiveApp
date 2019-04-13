@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Form from './Form';
-import NewMovie from './NewMovie';
-
+import { Router } from '@reach/router';
+import Home from './Home';
+import Movie from './Movie';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <Form />
-        <NewMovie />
-      </React.Fragment>
+      <Router>
+        <Home path='/' />
+        <Movie path='/movie/:id' />
+      </Router>
     );
   }
 }

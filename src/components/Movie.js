@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Form from './Form';
-import NewMovie from './NewMovie';
+import MovieDetail from './MovieDetail';
 
-class Home extends Component {
+class Movie extends Component {
   render() {
     return (
       <React.Fragment>
         <Header />
         <Form />
-        <NewMovie />
+        <MovieDetail />
       </React.Fragment>
     );
   }
 }
 
-export default Home;
+export default Movie;
