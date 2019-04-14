@@ -5,11 +5,12 @@ import MovieDetail from './MovieDetail';
 
 class Movie extends Component {
   render() {
+    const { id } = this.props;
     return (
       <React.Fragment>
         <Header />
         <Form />
-        <MovieDetail />
+        <MovieDetail id={id} />
       </React.Fragment>
     );
   }

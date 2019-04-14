@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Appwrapper = ({className, children}) => {
+const AppWrapper = ({className, children}) => {
   return (
     <div className={className=== undefined ? 'container' : `container ${className}`}>
       {children}
@@ -8,4 +8,4 @@ const Appwrapper = ({className, children}) => {
   );
 };
 
-export default Appwrapper;
+export default AppWrapper;
