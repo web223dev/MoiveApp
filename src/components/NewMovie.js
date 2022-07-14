@@ -36,10 +36,10 @@ class NewMovie extends Component {
           <div className="row newMovie">
             {
               movies.map((movie) =>
-                // <img className="imgResponsive" src={movie.poster_path ===null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={`${movies.title} poster`} key={movie.id} />
-                <div className="col-md-3 col-sm-6" key={movie.id}>
+                    // <img className="imgResponsive" src='http://via.placeholder.com/300x450' alt={`${movie.title} poster`} />
+              <div className="col-md-3 col-sm-6" key={movie.id}>
                   <Link to={`/movie/${movie.id}`} className="movieLink">
-                    <img className="imgResponsive" src='http://via.placeholder.com/300x450' alt={`${movie.title} poster`} />
+                    <img className="imgResponsive" src={movie.poster_path ===null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={`${movies.title} poster`} key={movie.id} />
                     <div className="movieInfo">
                       <p>{movie.title}</p>
                       <p>{movie.release_date}</p>
